@@ -12,11 +12,13 @@ body {
     height: 100vh;
     font-size: 16px;
     overflow-x: hidden;
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("images/la-bg.jpg") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 .container {
     width: 100%;
     height: 100%;
-    background: #fff;
 }
 main {
     width: 100%;
@@ -31,7 +33,10 @@ main > div {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to right, #222 50%, #fff 50%);
+    background: linear-gradient(to right, transparent 50%, #fff 50%);
+}
+.main-right {
+    background: #fff;
 }
 .prof-image {
     width: 50%;
@@ -125,9 +130,7 @@ main > div {
 .about {
     width: 100%;
     height: 50%;
-    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url("images/la-bg.jpg") no-repeat;
-    background-size: cover;
-    background-position: center;
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -136,15 +139,10 @@ main > div {
     width: 70%;
 }
 .about-cont > p {
+    text-align: center;
     color: #fff;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    text-align: center;
+    line-height: 30px;
 }
-.about-cont > p:last-child {
-    text-align: center;
-}
-
 @media only screen and (max-width: 600px) {
     main {
         flex-direction: column;
@@ -174,11 +172,14 @@ main > div {
         width: 50%;
         height: 15%;
     }
-    [class*="fab"] {
-        color: #fff !important;
+    .media > div:nth-child(3) > i, .media > div:nth-child(4) > i {
+        color: #fff;
     }
-    .media > div:hover {
-        border: none !important;
+    .media > div:nth-child(1):hover, .media > div:nth-child(2):hover {
+        border: 0;
+    }
+    .media > div:nth-child(3):hover, .media > div:nth-child(4):hover{
+        border: 0;
     }
     .info-cont {
         width: 100%;
@@ -197,13 +198,14 @@ main > div {
     .main-right {
         height: 700px;
     }
-    /*ABout*/
+
     .about {
         background-size: content;
         height: 30%;
     }
     .about-cont > p {
-        font-size: .8rem;
+        font-size: .9rem;
+        line-height: 30px;
     }
 }
 @media only screen and (min-width: 600px) {
@@ -234,11 +236,14 @@ main > div {
         width: 50%;
         height: 15%;
     }
-    [class*="fab"] {
-        color: #fff !important;
+    .media > div:nth-child(3) > i, .media > div:nth-child(4) > i {
+        color: #fff;
     }
-    .media > div:hover {
-        border: none !important;
+    .media > div:nth-child(1):hover, .media > div:nth-child(2):hover {
+        border: 0;
+    }
+    .media > div:nth-child(3):hover, .media > div:nth-child(4):hover{
+        border: 0;
     }
     .info-cont {
         width: 100%;
@@ -257,12 +262,80 @@ main > div {
     .main-right {
         height: 550px;
     }
-    /*ABout*/
+
     .about {
         background-size: content;
         height: 25%;
     }
     .about-cont > p {
-        font-size: .8rem;
+        font-size: .9rem;
+        line-height: 25px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    main {
+        flex-direction: row;
+        height: 500px;
+        border: 1px solid red;
+    }
+    main > div {
+        width: 100%;
+    }
+    .main-left {
+        background: linear-gradient(to right, transparent 50%, #fff 50%);
+        height: 100%;
+    }
+    .logo-cont {
+        text-align: left;
+    }
+    .logo-cont label {
+        padding-left: 15%;
+        line-height: 88px;
+    }
+    .prof-image {
+        width: 50%;
+        height: 47%;
+    }
+    .media {
+        bottom: 7%;
+        width: 35%;
+        height: 9%;
+    }
+    .media > div:nth-child(1) > i, .media > div:nth-child(2) > i {
+        color: #fff;
+    }
+    .media > div:nth-child(3) > i, .media > div:nth-child(4) > i {
+        color: #222;
+    }
+    .media > div:nth-child(1):hover, .media > div:nth-child(2):hover {
+        border: 1px solid #fff;
+    }
+    .media > div:nth-child(3):hover, .media > div:nth-child(4):hover{
+        border: 1px solid #222;
+    }
+    .info-cont {
+        width: 100%;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+        margin-top: 2em;
+    }
+    .info-cont > div:nth-child(1), .info-cont > div:nth-child(3){
+        text-align: center;
+    }
+    .info-cont > div:nth-child(2) {
+        text-align: justify;
+        padding: .5em;
+    }
+    .main-right {
+        height: 100%;
+    }
+    .about {
+        background-size: content;
+        height: 25%;
+    }
+    .about-cont > p {
+        font-size: .9rem;
+        line-height: 25px;
     }
 }

@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+html {
+    font-size: 100%;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    font-size: 16px;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+main > div {
+    width: 50%;
+    height: 100%;
+}
+.main-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #222 50%, #fff 50%);
+}
+.prof-image {
+    width: 50%;
+    height: 50%;
+    background: #fff;
+}
+[src="images/profile-image.jpg"] {
+    width: 100%;
+    height: 100%;
+}
+.logo-cont {
+    position: absolute;
+    width: 100%;
+    height: 15%;
+    top: 0;
+    left: 0;
+}
+.logo-cont label {
+    font: 700 3rem/88px 'Kaushan Script', cursive;
+    padding-left: 15%;
+    color: #fff;
+}
+.logo-cont label span {
+    color: rgb(223, 66, 68);
+}
+.media {
+    position: absolute;
+    width: 30%;
+    height: 7%;
+    bottom: 15%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.media > div {
+    width: 23%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.media > div:nth-child(1):hover, .media > div:nth-child(2):hover {
+    border: 1px solid #fff;
+}
+.media > div:nth-child(3):hover, .media > div:nth-child(4):hover{
+    border: 1px solid #222;
+}
+.media > div > i {
+    font-size: 1.7rem;
+}
+.media > div:nth-child(1) > i, .media > div:nth-child(2) > i {
+    color: #fff;
+}
+.media > div:nth-child(3) > i, .media > div:nth-child(4) > i {
+    color: #222;
+}
+.info-cont {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+}
+.info-cont > div:nth-child(1) {
+    font-size: 2.5rem;
+    font-family: 'Patua One', cursive;
+    letter-spacing: 2px;
+    line-height: 60px;
+}
+.info-cont > div:nth-child(2) {
+    font-size: .9rem;
+    font-family: 'Poppins', sans-serif;
+}
+.info-cont > div:nth-child(3) > button {
+    margin: 1em 0;
+    font-size: 1rem;
+    padding: .7em 1em;
+    cursor: pointer;
+    background: rgb(223, 66, 68);
+    border: 0;
+    outline: 0;
+    color: #fff;
+}
+.info-cont > div:nth-child(3) > button:last-child {
+    padding: .7em 1.5em;
+    margin-left: .5em;
+}
+.info-cont > div:nth-child(3) > button:hover {
+    color: #000;
+}
+.about {
+    width: 100%;
+    height: 100%;
+    background: red;
+}
+
+
+@media only screen and (max-width: 360px) {
+    main {
+        flex-direction: column;
+    }
+    main > div {
+        width: 100%;
+    }
+    .main-left {
+        background: #222;
+    }
+    .logo-cont {
+        text-align: center;
+    }
+    .logo-cont label {
+        padding: 0;
+        line-height: 60px;
+    }
+    .prof-image {
+        width: 60%;
+        height: 60%;
+    }
+    .media {
+        bottom: 3%;
+        width: 50%;
+        height: 15%;
+    }
+    [class*="fab"] {
+        color: #fff !important;
+    }
+    .media > div:hover {
+        border: none !important;
+    }
+    .info-cont {
+        width: 100%;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+        margin-top: 2em;
+    }
+    .info-cont > div:nth-child(1), .info-cont > div:nth-child(3){
+        text-align: center;
+    }
+    .info-cont > div:nth-child(2) {
+        text-align: justify;
+        padding: .5em;
+    }
+}

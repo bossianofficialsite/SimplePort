@@ -186,7 +186,6 @@ main > div {
         top: 0;
         left: 0;
         transform: translate(0);
-        margin-top: 2em;
     }
     .info-cont > div:nth-child(1), .info-cont > div:nth-child(3){
         text-align: center;
@@ -202,6 +201,9 @@ main > div {
     .about {
         background-size: content;
         height: 30%;
+    }
+    .about-cont {
+        width: 95%;
     }
     .about-cont > p {
         font-size: .9rem;
@@ -250,7 +252,6 @@ main > div {
         top: 0;
         left: 0;
         transform: translate(0);
-        margin-top: 2em;
     }
     .info-cont > div:nth-child(1), .info-cont > div:nth-child(3){
         text-align: center;
@@ -292,7 +293,7 @@ main > div {
         line-height: 88px;
     }
     .prof-image {
-        width: 50%;
+        max-width: 250px;
         height: 47%;
     }
     .media {
@@ -313,11 +314,10 @@ main > div {
         border: 1px solid #222;
     }
     .info-cont {
-        width: 100%;
-        top: 0;
-        left: 0;
-        transform: translate(0);
-        margin-top: 2em;
+        width: 80%;
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%, -50%);
     }
     .info-cont > div:nth-child(1), .info-cont > div:nth-child(3){
         text-align: center;

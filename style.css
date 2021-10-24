@@ -33,7 +33,7 @@ main > div {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to right, transparent 50%, #fff 50%);
+    background: linear-gradient(to right, transparent 50%, red 50%);
 }
 .main-right {
     background: #fff;
@@ -146,7 +146,45 @@ main > div {
     text-align: center;
     color: #fff;
     line-height: 30px;
+    font-family: 'Poppins', sans-serif;
 }
+.skill {
+    width: 100%;
+    background: #fff;
+    padding: 4em;
+}
+.skill-cont {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+}
+.skill-cont > div:first-child {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-flow: column;
+}
+.skill-cont > div:last-child {
+    width: 100%;
+    height: 350px;
+}
+.skill-cont > div:first-child > div {
+    width: 100%;
+    height: 50%;
+}
+.skill-cont > div:first-child > div:first-child {
+    font: 700 1.7rem/100px 'Poppins', sans-serif; 
+    text-align: center;
+}
+.skill-cont > div:first-child > div:last-child {
+    font: 1rem 'Poppins', sans-serif; 
+    text-align: center;
+}
+
+
+
+
 @media only screen and (max-width: 600px) {
     main {
         flex-direction: column;
@@ -273,7 +311,7 @@ main > div {
         height: 25%;
     }
     .about-cont > p {
-        font-size: .9rem;
+        font-size: .8rem;
         line-height: 25px;
     }
 }
@@ -338,7 +376,7 @@ main > div {
         height: 25%;
     }
     .about-cont > p {
-        font-size: .9rem;
+        font-size: .8rem;
         line-height: 25px;
     }
 }
@@ -351,7 +389,6 @@ main > div {
         width: 100%;
     }
     .main-left {
-        background: linear-gradient(to right, transparent 50%, #fff 50%);
         height: 100%;
     }
     .logo-cont {
@@ -403,7 +440,7 @@ main > div {
         height: 25%;
     }
     .about-cont > p {
-        font-size: 1rem;
+        font-size: .8rem;
         line-height: 25px;
     }
 }
@@ -416,7 +453,6 @@ main > div {
         width: 100%;
     }
     .main-left {
-        background: linear-gradient(to right, transparent 50%, #fff 50%);
         height: 100%;
     }
     .logo-cont {
@@ -453,12 +489,16 @@ main > div {
         left: 40%;
         transform: translate(-50%, -50%);
     }
+    .info-cont > div:nth-child(1) {
+        font-size: 2.5rem
+    }
     .info-cont > div:nth-child(1), .info-cont > div:nth-child(3){
         text-align: center;
     }
     .info-cont > div:nth-child(2) {
         text-align: justify;
         padding: .5em;
+        font-size: 1rem;
     }
     .main-right {
         height: 100%;
@@ -468,7 +508,7 @@ main > div {
         height: 25%;
     }
     .about-cont > p {
-        font-size: 1rem;
+        font-size: .8rem;
         line-height: 25px;
     }
 }

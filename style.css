@@ -168,6 +168,9 @@ main > div {
 .skill-cont > div:last-child {
     width: 100%;
     height: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 .skill-cont > div:first-child > div {
     width: 100%;
@@ -181,8 +184,28 @@ main > div {
     font: 1rem 'Poppins', sans-serif; 
     text-align: center;
 }
-
-
+.skill-cont > div:last-child > div {
+    width: 31%;
+    height: 85%;
+    border: 1px solid rgba(0,0,0,.2);
+}
+.skill-logo {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    top: -.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: rgb(245, 83, 86);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.skill-logo > i {
+    font-size: 1.7rem;
+    color: #fff;
+}
 
 
 @media only screen and (max-width: 600px) {

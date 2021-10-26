@@ -15,6 +15,7 @@ body {
     background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("images/la-bg.jpg") no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
 }
 .container {
     width: 100%;
@@ -206,6 +207,29 @@ main > div {
     font-size: 1.7rem;
     color: #fff;
 }
+.skill-logo + p {
+    margin-top: 2.5em;
+    text-align: center;
+}
+.skill-logo ~ p {
+    margin-bottom: 1em;
+    font-size: 1rem;
+    color: rgba(0,0,0,.8);
+}
+.skill-logo ~ p > i {
+    color: rgb(245, 83, 86);
+    padding-left: 1em;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 @media only screen and (max-width: 600px) {
@@ -274,6 +298,32 @@ main > div {
         font-size: .9rem;
         line-height: 30px;
     }
+    .skill {
+        padding: 0;
+        height: 150%;
+    }
+    .skill-cont {
+        width: 90%;
+    }
+    .skill-cont > div:first-child > div:first-child {
+        font-size: 1.5rem;
+    }
+    .skill-cont > div:first-child > div:last-child {
+        font-size: .9rem;
+    }
+    .skill-cont > div:last-child{
+        flex-direction: column;
+        height: 80%;
+    }
+    .skill-cont > div:last-child > div:nth-child(1) {
+        margin-top: 2.8em;
+    }
+    .skill-cont > div:last-child > div {
+        width: 70%;
+        margin:  1.5em auto;
+    }
+
+
 }
 @media only screen and (min-width: 600px) {
     main {

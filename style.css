@@ -178,7 +178,7 @@ main > div {
     height: 50%;
 }
 .skill-cont > div:first-child > div:first-child {
-    font: 700 1.7rem/100px 'Poppins', sans-serif; 
+    font: 700 1.7rem/100px 'Poppins', sans-serif;
     text-align: center;
 }
 .skill-cont > div:first-child > div:last-child {
@@ -220,7 +220,89 @@ main > div {
     color: rgb(245, 83, 86);
     padding-left: 1em;
 }
-
+.project {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+.project-cont {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+}
+.project-cont > div:first-child {
+    width: 100%;
+    height: 70px;
+    font: 700 1.7rem 'Poppins', sans-serif;
+    text-align: center;
+}
+.project-cont > div:last-child {
+    width: 100%;
+    height: 530px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.project-cont > div:last-child > div {
+    width: 31%;
+    height: 48%;
+}
+.proj-img {
+    width: 100%;
+    height: 85%;
+    overflow: hidden;
+    cursor: pointer;
+} 
+.proj-img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+.proj-info {
+    width: 100%;
+    height: 15%;
+    text-align: center;
+    line-height: 40px;
+    color: rgb(223, 66, 68);
+} 
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    background: rgba(0, 0, 0, .5);
+    top: 0;
+    left: 0;
+    transition: .3s;
+    overflow: hidden;
+}
+.overlay > div {
+    position: absolute;
+    right: 2%;
+    height: 100%;
+}
+.overlay > div > div {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    float: left;
+    margin: .2em;
+}
+.overlay > div > div:hover {
+    opacity: .7;
+}
+.overlay > div > div:first-child {
+    background: rgb(233, 65, 65);
+}
+.overlay > div > div:last-child {
+    background: rgb(247, 184, 68);
+}
+.proj-img:hover .overlay {
+    height: 23px;
+}
+.proj-img:hover img {
+    opacity: .8;
+}
 
 
 
@@ -310,6 +392,7 @@ main > div {
     }
     .skill-cont > div:first-child > div:last-child {
         font-size: .9rem;
+        text-align: justify;
     }
     .skill-cont > div:last-child{
         flex-direction: column;
@@ -322,7 +405,6 @@ main > div {
         width: 70%;
         margin:  1.5em auto;
     }
-
 
 }
 @media only screen and (min-width: 600px) {
@@ -386,6 +468,34 @@ main > div {
     .about-cont > p {
         font-size: .8rem;
         line-height: 25px;
+    }
+    .skill {
+        padding: 0;
+        height: 150%;
+    }
+    .skill-cont {
+        width: 90%;
+    }
+    .skill-cont > div:first-child > div:first-child {
+        font-size: 1.5rem;
+    }
+    .skill-cont > div:first-child > div:last-child {
+        font-size: .9rem;
+        text-align: justify;
+    }
+    .skill-cont > div:last-child{
+        flex-direction: column;
+        height: 80%;
+    }
+    .skill-cont > div:last-child > div:nth-child(1) {
+        margin-top: 2.8em;
+    }
+    .skill-cont > div:last-child > div {
+        width: 70%;
+        margin:  1.5em auto;
+    }
+    .skill-logo + p ~ p {
+        font-size: 1rem;
     }
 }
 @media only screen and (min-width: 768px) {
@@ -452,6 +562,27 @@ main > div {
         font-size: .8rem;
         line-height: 25px;
     }
+    .skill {
+        padding: 1em;
+        height: 80%;
+    }
+    .skill-cont {
+        width: 95%;
+    }
+    .skill-cont > div:first-child > div:first-child {
+        font-size: 1.7rem;
+    }
+    .skill-cont > div:first-child > div:last-child {
+        font-size: 1rem;
+        text-align: center;
+    }
+    .skill-cont > div:last-child{
+        height: 350px;
+        flex-direction: row;
+    }
+    .skill-cont > div:last-child > div {
+        width: 31%;
+    }
 }
 @media only screen and (min-width: 992px) {
     main {
@@ -515,6 +646,10 @@ main > div {
     .about-cont > p {
         font-size: .8rem;
         line-height: 25px;
+    }
+    .skill {
+        padding: 2em;
+        height: 80%;
     }
 }
 @media only screen and (min-width: 1200px) {
@@ -583,5 +718,12 @@ main > div {
     .about-cont > p {
         font-size: .8rem;
         line-height: 25px;
+    }
+    .skill {
+        padding: 4em;
+        height: 100%;
+    }
+    .skill-cont {
+        width: 70%;
     }
 }

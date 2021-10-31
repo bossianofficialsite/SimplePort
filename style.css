@@ -180,6 +180,7 @@ main > div {
 .skill-cont > div:first-child > div:first-child {
     font: 700 1.7rem/100px 'Poppins', sans-serif;
     text-align: center;
+    color: rgb(233, 65, 65);
 }
 .skill-cont > div:first-child > div:last-child {
     font: 1rem 'Poppins', sans-serif; 
@@ -235,6 +236,7 @@ main > div {
     height: 70px;
     font: 700 1.7rem 'Poppins', sans-serif;
     text-align: center;
+    color: rgb(233, 65, 65);
 }
 .project-cont > div:last-child {
     width: 100%;
@@ -250,8 +252,6 @@ main > div {
 .proj-img {
     width: 100%;
     height: 85%;
-    overflow: hidden;
-    cursor: pointer;
 } 
 .proj-img > img {
     width: 100%;
@@ -265,6 +265,7 @@ main > div {
     text-align: center;
     line-height: 40px;
     color: rgb(223, 66, 68);
+    opacity: 0;
 } 
 .overlay {
     position: absolute;
@@ -274,35 +275,86 @@ main > div {
     top: 0;
     left: 0;
     transition: .3s;
-    overflow: hidden;
 }
 .overlay > div {
     position: absolute;
     right: 2%;
     height: 100%;
+    opacity: 0; 
 }
-.overlay > div > div {
+.overlay > div > div:nth-child(1), .overlay > div > div:nth-child(2) {
     width: 15px;
     height: 15px;
     border-radius: 50%;
     float: left;
     margin: .2em;
 }
-.overlay > div > div:hover {
-    opacity: .7;
+.overlay > div > div {
+    cursor: pointer;
 }
-.overlay > div > div:first-child {
+.overlay > div > div:nth-child(1) {
     background: rgb(233, 65, 65);
 }
-.overlay > div > div:last-child {
+.overlay > div > div:nth-child(2) {
     background: rgb(247, 184, 68);
 }
 .proj-img:hover .overlay {
     height: 23px;
 }
+@keyframes blur {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.proj-img:hover .overlay > div:first-child {
+    animation: blur .3s linear forwards;    
+}
 .proj-img:hover img {
     opacity: .8;
 }
+.tooltips-1, .tooltips-2 {
+    background: #000;
+    position: absolute;
+    top: -40px;
+    right: -18px;
+    color: #fff;
+    font-size: .8rem;
+    padding: .5em .8em;
+    border-radius: 10px;
+    visibility: hidden;
+}
+.tooltips-1::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -10%;
+    border-width: 7px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+.tooltips-2::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -6%;
+    border-width: 7px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+.overlay > div > div:hover .tooltips-1 {
+    visibility: visible;
+}
+.overlay > div > div:hover .tooltips-2 {
+    visibility: visible;
+}
+.project-cont > div > div:hover .proj-info {
+    opacity: 1;
+} 
 
 
 

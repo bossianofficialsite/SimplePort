@@ -366,9 +366,16 @@ main > div {
     display: none;
 }
 [class="pre"], [class="nxt"] {
-    display: none;
+    visibility: hidden;
 }
-
+#i1:checked ~ #one,
+#i2:checked ~ #two,
+#i3:checked ~ #three,
+#i4:checked ~ #four,
+#i5:checked ~ #five,
+#i6:checked ~ #six {
+    z-index: 9;
+}
 
 
 
@@ -469,6 +476,9 @@ main > div {
         width: 70%;
         margin:  1.5em auto;
     }
+    .project {
+        height: 70%;
+    }
     .project-cont > div:last-child {
         display: block;
         border: 1px solid rgba(0, 0, 0, .2);
@@ -484,26 +494,34 @@ main > div {
         object-fit: cover;
         width: 100%;
     }
+    .proj-img:hover img {
+        opacity: 1;
+    }
     [class="pre"], [class="nxt"] {
-        display: block;
+        visibility: visible;
         position: absolute;
-        width: 20%;
-        height: 100%;
-        top: 0;
-        background: rgba(0,0,0,.2);
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        top: 40%;
         z-index: 99;
         cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    [class="pre"] {
+        left: 1%;
     }
     [class="nxt"] {
-        right: 0;
+        right: 1%;
     }
-    #i1:checked ~ #one,
-    #i2:checked ~ #two,
-    #i3:checked ~ #three,
-    #i4:checked ~ #four,
-    #i5:checked ~ #five,
-    #i6:checked ~ #six {
-        z-index: 9;
+    [class="pre"] > i, [class="nxt"] > i {
+        color: rgb(223, 66, 68);
+        font-size: 1.5rem;
+    }
+    [class="pre"]:hover, [class="nxt"]:hover {
+        background: rgba(0, 0, 0, .2);
     }
     .proj-info {
         opacity: 1;
@@ -599,6 +617,56 @@ main > div {
     }
     .skill-logo + p ~ p {
         font-size: 1rem;
+    }
+    .project {
+        height: 70%;
+    }
+    .project-cont > div:last-child {
+        display: block;
+        border: 1px solid rgba(0, 0, 0, .2);
+        height: 350px;
+    }
+    .project-cont > div:last-child > div {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+    }
+    .proj-img > img {
+        object-fit: contain;
+        width: 100%;
+    }
+    .proj-img:hover img {
+        opacity: 1;
+    }
+    [class="pre"], [class="nxt"] {
+        visibility: visible;
+        position: absolute;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        top: 40%;
+        z-index: 99;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    [class="pre"] {
+        left: 1%;
+    }
+    [class="nxt"] {
+        right: 1%;
+    }
+    [class="pre"] > i, [class="nxt"] > i {
+        color: rgb(223, 66, 68);
+        font-size: 1.5rem;
+    }
+    [class="pre"]:hover, [class="nxt"]:hover {
+        background: rgba(0, 0, 0, .2);
+    }
+    .proj-info {
+        opacity: 1;
     }
 }
 @media only screen and (min-width: 768px) {
@@ -753,6 +821,33 @@ main > div {
     .skill {
         padding: 2em;
         height: 80%;
+    }
+    .project {
+        height: 100%;
+    }
+    .project-cont > div:last-child {
+        display: flex;
+        border: none;
+        height: 530px;
+    }
+    .project-cont > div:last-child > div {
+        width: 31%;
+        height: 48%;
+        position: relative;
+        z-index: 1;
+    }
+    .proj-img > img {
+        object-fit: cover;
+        width: 100%;
+    }
+    .proj-img:hover img {
+        opacity: .8;
+    }
+    [class="pre"], [class="nxt"] {
+       visibility: hidden;
+    }
+    .proj-info {
+        opacity: 0;
     }
 }
 @media only screen and (min-width: 1200px) {

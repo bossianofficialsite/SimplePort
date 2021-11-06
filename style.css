@@ -481,6 +481,7 @@ input, textarea {
 .social-cont > div:hover .social-name {
     color: rgb(223, 66, 68);
 }
+
 .social-icon {
     width: 60px;
     height: 60px;
@@ -488,7 +489,11 @@ input, textarea {
     top: 50%;
     left: 15%;
     transform: translate(-50%, -50%);
-    background: rgb(22, 128, 173);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 2.5rem;
 }
 .social-name {
     width: 150px;
@@ -502,6 +507,13 @@ input, textarea {
     justify-content: flex-start;
     font: 1rem 'Poppins', sans-serif;
     color: #fff;
+}
+.copyright {
+    text-align: center;
+    color: #fff;
+    padding: .5em;
+    background: #222;
+    font-size: .9rem;
 }
 
 
@@ -700,10 +712,17 @@ input, textarea {
         left: 50%;
         width: 95%;
         height: 100%;
+        font-size: 1.5rem;
     }
     .grid-mail-05 > button {
         width: 40%;
         left: 60%;
+    }
+    .social-cont > div:hover .social-icon {
+        color: rgb(8, 122, 234);
+    }
+    .copyright {
+        font-size: .7rem;
     }
 
     
@@ -886,6 +905,13 @@ input, textarea {
         left: 50%;
         width: 95%;
         height: 100%;
+        font-size: 2rem;
+    }
+    .social-cont > div:hover .social-icon {
+        color: rgb(8, 122, 234);
+    }
+    .copyright {
+        font-size: .8rem;
     }
 }
 @media only screen and (min-width: 768px) {
@@ -1004,11 +1030,19 @@ input, textarea {
     }
     .social-name {
         visibility: visible;
+        left: 52%;
     }
     .social-icon {
         left: 15%;
         width: 60px;
         height: 60px;
+        font-size: 2.5rem;
+    }
+    .social-cont > div:hover .social-icon {
+        color: #fff;
+    }
+    .copyright {
+        font-size: .9rem;
     }
 }
 @media only screen and (min-width: 992px) {

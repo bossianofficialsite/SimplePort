@@ -390,7 +390,6 @@ main > div {
 .contact-cont > div {
     width: 50%;
     height: 100%;
-    border: 1px solid green;
 }
 .mail-cont {
     width: 80%;
@@ -462,6 +461,51 @@ input, textarea {
     cursor: pointer;
     border: none;
 }
+.social-cont {
+    width: 45%;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+}
+.social-cont > div {
+    width: 100%;
+    height: 20%;
+    cursor: pointer;
+}
+.social-cont > div:hover .social-name {
+    color: rgb(223, 66, 68);
+}
+.social-icon {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+}
+.social-name {
+    width: 150px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font: 1rem 'Poppins', sans-serif;
+    color: #fff;
+}
+
+
+
+
+
+
+
 
 
 

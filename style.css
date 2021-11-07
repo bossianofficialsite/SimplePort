@@ -675,7 +675,7 @@ input, textarea {
         opacity: 1;
     }
     .contact {
-        height: 70%;
+        height: 500px;
     }
     .contact-cont {
         width: 100%;
@@ -693,6 +693,9 @@ input, textarea {
         position: absolute;
         bottom: 8%;
         left: 12%;
+    }
+    .mail-cont {
+        width: 95%;
     }
     .social-cont {
         width: 100%;
@@ -868,7 +871,7 @@ input, textarea {
         opacity: 1;
     }
     .contact {
-        height: 70%;
+        height: 500px;
     }
     .contact-cont {
         width: 100%;
@@ -1000,7 +1003,7 @@ input, textarea {
         width: 31%;
     }
     .contact {
-        height: 80%;
+        height: 600px;
     }
     .contact-cont {
         width: 100%;
